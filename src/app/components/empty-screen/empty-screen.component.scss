@@ -1,0 +1,106 @@
+div {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ion-grid {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+
+    .content-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      
+      .cloud-container {
+        position: relative;
+        width: 120px; // Tăng kích thước container
+        height: 120px; // Tăng kích thước container
+        background: #f3f4f6;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 24px;
+
+        .cloud-icon {
+          font-size: 240px; // Tăng kích thước cloud icon
+          color: #9ca3af;
+        }
+
+        .flash-icon {
+          position: absolute;
+          bottom: 5px;
+          right: 5px;
+          font-size: 55px; // Tăng kích thước flash icon
+          color: #ec4899;
+        }
+      }
+
+      .error-title {
+        font-size: 24px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 16px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+        margin-bottom: 8px;
+        max-width: 300px;
+      }
+
+      .description {
+        font-size: 16px;
+        margin-bottom: 32px;
+        max-width: 300px;
+        line-height: 1.5;
+      }
+    }
+
+    .button-row {
+      margin-top: 0;
+      
+      ion-button {
+        --background: #ff6b6b; // Màu mặc định cho button
+        --background-activated: #ff6b6b;
+        --background-hover: #ff6b6b;
+        --box-shadow: none;
+        --border-radius: 9999px;
+        --padding-start: 32px;
+        --padding-end: 32px;
+        height: 48px;
+        font-size: 16px;
+        text-transform: none;
+        margin: 0 auto;
+        display: block;
+
+        &.retry-button {
+          --background: linear-gradient(to right, #ff758c, #ff7eb3);
+        }
+
+        ion-text {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// Override màu sắc mặc định
+:host {
+  ion-text[color="dark"] {
+    color: #1f2937;
+  }
+
+  ion-text[color="medium"] {
+    color: #6b7280;
+  }
+}

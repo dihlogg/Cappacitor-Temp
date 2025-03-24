@@ -1,0 +1,39 @@
+<div class="container">
+  <h1 class="title">Chuyển đổi nhiệt độ</h1>
+
+  <div class="card">
+    <div class="input-group">
+      <input
+        type="number"
+        [(ngModel)]="celcius"
+        placeholder="Nhập độ C"
+        class="input-field"
+      />
+      <button (click)="convert()" class="btn btn-primary">
+        <ion-icon name="swap-horizontal-outline"></ion-icon> Chuyển đổi
+      </button>
+    </div>
+
+    <div *ngIf="fahrenheit !== null" class="result-card">
+      <p class="result-text">
+        Kết quả: <span class="temperature">{{fahrenheit}}°F</span>
+      </p>
+      <button (click)="shareResult()" class="btn btn-share">
+        <ion-icon name="share-social-outline"></ion-icon> Chia sẻ
+      </button>
+    </div>
+
+    <button (click)="getCurrentLocation()" class="btn btn-location">
+      <ion-icon name="locate-outline"></ion-icon> Lấy vị trí hiện tại
+    </button>
+
+    <div *ngIf="location" class="location-card">
+      <p class="coordinate">
+        Vĩ độ: <span class="value">{{location.latitude}}</span>
+      </p>
+      <p class="coordinate">
+        Kinh độ: <span class="value">{{location.longitude}}</span>
+      </p>
+    </div>
+  </div>
+</div>

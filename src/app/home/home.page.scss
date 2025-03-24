@@ -1,0 +1,170 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+
+.title {
+  color: #ff4444;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  border-color: black;
+}
+
+.input-field {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: black;
+  transition: all 0.3s ease;
+  border-color: black;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #0095ff;
+  box-shadow: 0 0 0 2px rgba(0, 149, 255, 0.2);
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: #0095ff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #0077cc;
+}
+
+.btn-share {
+  background: #4CAF50;
+  color: white;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.btn-share:hover {
+  background: #388E3C;
+}
+
+.btn-location {
+  background: #9c27b0;
+  color: white;
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.btn-location:hover {
+  background: #7B1FA2;
+}
+
+.result-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.result-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.temperature {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff4444;
+}
+
+.location-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.coordinate {
+  margin: 8px 0;
+  font-size: 16px;
+  color: black;
+}
+
+.value {
+  color: #0095ff;
+  font-weight: bold;
+}
+.input-field::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

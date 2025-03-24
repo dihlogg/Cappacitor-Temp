@@ -1,0 +1,43 @@
+<div [style.background-image]="'url(' + model?.background + ')'">
+  <ion-grid [class]="model?.centerAlign ? 'ion-text-center' : ''">
+    <ion-row>
+      <ion-col [offset]="!model?.centerAlign ? 1 : 0" class="content-column">
+        <!-- Cloud Icon Container -->
+        <div class="cloud-container">
+          <ion-icon name="cloud-outline" class="cloud-icon"></ion-icon>
+          <ion-icon name="flash" class="flash-icon"></ion-icon>
+        </div>
+
+        <ion-label *ngIf="model?.title" [color]="model?.titleColor ? model.titleColor : 'light'" class="error-title">
+          Whoops!!
+        </ion-label>
+
+        <p class="subtitle" *ngIf="model?.subtitle">
+          <ion-text [color]="model?.color ? model.color : 'light'">
+            {{model?.subtitle}}
+          </ion-text>
+        </p>
+
+        <p class="description" *ngIf="model?.description">
+          <ion-text [color]="model?.color ? model.color : 'light'">
+            {{model?.description}}
+          </ion-text>
+        </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="model?.button" class="button-row">
+      <ion-col [offset]="!model?.centerAlign ? 1 : 0">
+        <ion-button 
+          shape="round" 
+          class="retry-button"
+          (click)="retryButton()">
+          <ion-text 
+            [class]="model?.centerAlign ? 'ion-margin-horizontal ion-padding-horizontal' : ''">
+            {{model?.button}}
+          </ion-text>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
