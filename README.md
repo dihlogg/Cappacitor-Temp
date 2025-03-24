@@ -24,6 +24,7 @@ SCSS: Styling cho giao diện ứng dụng.
 ![Screenshot 2025-03-24 141916](https://github.com/user-attachments/assets/e3d87b21-3b7c-4ed2-9775-ad40ad13e317)
 
 ![Giao diện ứng dụng](src/assets/imgs/Image-Capa-Temp.png)
+![Màn hình chia sẽ](src/assets/imgs/Share-Temp.png)
 
 🛠️ Cách Cài Đặt & Chạy Ứng Dụng
 
